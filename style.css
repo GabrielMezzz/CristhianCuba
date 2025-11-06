@@ -1,40 +1,96 @@
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0e0e0e;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-header {
-  text-align: center;
-  padding: 50px;
-  background: linear-gradient(135deg, #3a0ca3, #7209b7);
-}
-
-h1, h2 {
-  margin: 0 0 10px;
-}
-
-.grid {
+/* Hero / cabecera */
+.hero {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.card {
-  background: #1a1a1a;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
+  height: 70vh;
+  background: linear-gradient(135deg, #3a0ca3, #7209b7);
   text-align: center;
+  padding: 0 20px;
+}
+.hero .hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.hero .subtitle {
+  font-size: 1.3em;
+  color: #ddd;
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #ffbe0b;
+/* Sección proyectos */
+.projects {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.4em;
+  color: #fff;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+}
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.project-card h3 {
+  margin: 20px;
+  font-size: 1.8em;
+}
+.project-card p {
+  margin: 0 20px 20px;
+  color: #bbb;
+}
+.project-card a {
+  display: block;
+  margin: 0 20px 20px;
+  padding: 10px 0;
+  text-align: center;
+  background: #7209b7;
+  color: #fff;
   text-decoration: none;
+  border-radius: 6px;
+}
+.project-card:hover {
+  background: #2a2a2a;
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #0c0c0c;
+  color: #777;
+}
+footer a {
+  color: #7209b7;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
